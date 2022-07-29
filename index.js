@@ -1,8 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const Students = require('./models/students')
+const cors = require('cors')
 
 const app = express()
+app.use(cors())
 require('dotenv').config()
 const PORT = process.env.PORT || 3000
 const MONGO_ATLAS_URI = `mongodb+srv://sample-students:${process.env.MONGO_ATLAS_PASS}@cluster0.lhze0.mongodb.net/?retryWrites=true&w=majority`;
