@@ -2,7 +2,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const Students = require('./models/students')
 const cors = require('cors')
+const { AwakeHeroku } = require("awake-heroku");
 
+AwakeHeroku.add("https://students-sample-1a.herokuapp.com");
 const app = express()
 app.use(cors())
 require('dotenv').config()
